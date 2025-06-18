@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login | MathCine</title>
+    <link rel="stylesheet" href="../Css/login.css" />
+    <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.3.0/dist/pouchdb.min.js"></script>
+    <script src="../JS/login.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="../Imagem/download.png" alt="Logo MathCine" style="cursor:pointer;" />
+            </a>
+            <div class="top-links">
+                <a href="contato.html" class="btn">Contato</a>
+                <a href="faq.html" class="btn">FAQ</a>
+                <a href="suporte.html" class="btn">Suporte</a>
+                <a href="ajuda.html" class="btn ajuda-link">Precisa de ajuda?</a>
+            </div>
+        </div>
+    </header>
+    <div class="form-wrapper">
+        <h2>Login</h2>
+        <form id="login-form" action="#">
+            <div class="form-control">
+                <input type="text" id="login-email" required placeholder=" " />
+                <label for="login-email">E-mail</label>
+            </div>
+            <div class="form-control password-wrapper">
+                <input type="password" id="login-password" required placeholder=" " />
+                <label for="login-password">Senha</label>
+                <span id="toggle-password" class="eye-icon">
+                </span>
+            </div>
+            <button type="submit">Logar-se</button>
+            <div class="form-help">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me" />
+                    <label for="remember-me">Lembrar de mim</label>
+                </div>
+            </div>
+        </form>
+        <p>Novo no MathCine? <a href="../Html/cadastro.html">Cadastre-se Agora!</a></p>
+    </div>
+</body>
+
+</html>

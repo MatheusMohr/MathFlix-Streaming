@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin | MathCine</title>
+  <link rel="stylesheet" href="../Css/admin.css" />
+  <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.3.0/dist/pouchdb.min.js"></script>
+  <script src="../JS/admin.js" defer></script>
+</head>
+
+<script>
+  if (sessionStorage.getItem('usuario_admin') !== 'true') {
+    alert('Acesso restrito: você precisa ser administrador para acessar!');
+    location.href = 'filmes.html';
+  }
+</script>
+
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html">
+        <img src="../Imagem/download.png" alt="Logo MathCine" style="cursor:pointer;" />
+      </a>
+      <h1>Administração MathCine</h1>
+      <div class="top-links">
+        <a href="../Html/filmes.html" class="btn catalogo">Acessar Catalogo</a>
+        <a href="../Html/index.html" class="btn menu">Voltar ao menu</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="admin-container">
+
+    <section id="movie-section">
+      <h2>Adicionar / Editar Filme</h2>
+      <form id="add-movie-form">
+        <label>Nome do Filme:</label>
+        <input type="text" name="nome" required />
+
+        <label>URL da Imagem (capa):</label>
+        <input type="url" name="imagem" required />
+
+        <label>URL do Trailer (https://youtube.com/embed/):</label>
+        <input type="url" name="trailer" required />
+
+        <label>Classificação Indicativa:</label>
+        <input type="text" name="classificacao" required />
+
+        <label>Descrição:</label>
+        <textarea name="descricao" rows="4" required></textarea>
+
+        <label>Duração:</label>
+        <input type="text" name="duracao" required />
+
+        <label>Gênero (separe por vírgula):</label>
+        <input type="text" name="genero" required />
+
+        <label>Ano de Lançamento:</label>
+        <input type="number" name="ano" required />
+
+        <div class="form-buttons">
+          <button type="submit" id="btn-salvar">Adicionar Filme</button>
+          <button type="button" id="btn-cancelar" style="display:none;">Cancelar Edição</button>
+        </div>
+      </form>
+
+      <h3>Filmes Cadastrados</h3>
+      <ul id="filme-lista"></ul>
+    </section>
+
+    <section id="users-section">
+      <h2>Adicionar / Editar Usuário</h2>
+      <form id="user-form">
+        <label>Nome:</label>
+        <input type="text" name="nome" required />
+
+        <label>Email:</label>
+        <input type="email" name="email" required />
+
+        <label>Senha:</label>
+        <input type="password" name="senha" placeholder="Deixe vazio para não alterar" />
+
+        <label><input type="checkbox" name="admin" /> Admin</label>
+
+        <div class="form-buttons">
+          <button type="submit" id="btn-save-user">Adicionar Usuário</button>
+          <button type="button" id="btn-cancel-user" style="display:none;">Cancelar Edição</button>
+        </div>
+      </form>
+
+      <h3>Usuários Cadastrados</h3>
+      <table id="usuariosTable" cellspacing="0" cellpadding="5">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Admin</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+
+</html>

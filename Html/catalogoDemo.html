@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Catálogo | MathCine</title>
+  <link rel="stylesheet" href="../Css/catalogoDemo.css">
+    <script src="../JS/catalogoDemo.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.3.1/dist/pouchdb.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html"><img src="../Imagem/download.png" alt="Logo MATHFlix" /></a>
+      <div class="top-links">
+        <a href="index.html" class="btn voltar">Voltar</a>
+      </div>
+    </div>
+  </header>
+  <div class="catalogo" id="catalogo">
+
+    <div class="filme" data-titulo="Jurassic Park"
+      data-sinopse="Jurassic Park é um parque temático revolucionário onde cientistas clonam dinossauros a partir de DNA preservado, mas uma falha no sistema causa caos quando as criaturas escapam e ameaçam os visitantes."
+      data-classificacao="10 anos" data-duracao="2h 7min" data-genero="Aventura, Ficção Científica" data-ano="1993">
+      <img src="https://image.tmdb.org/t/p/w500/oU7Oq2kFAAlGqbU4VoAE36g4hoI.jpg" alt="Jurassic Park" />
+      <h3>Jurassic Park</h3>
+      <div class="descricao-abaixo"></div>
+    </div>
+
+    <div class="filme" data-titulo="Matrix"
+      data-sinopse="Neo descobre que a realidade é uma simulação controlada por máquinas e junta-se a um grupo rebelde para lutar pela liberdade da humanidade."
+      data-classificacao="14 anos" data-duracao="2h 16min" data-genero="Ação, Ficção Científica" data-ano="1999">
+      <img src="https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" alt="Matrix" />
+      <h3>Matrix</h3>
+      <div class="descricao-abaixo"></div>
+    </div>
+
+    <div class="filme" data-titulo="O Senhor dos Anéis"
+      data-sinopse="Frodo e seus companheiros embarcam em uma perigosa jornada para destruir um anel mágico com o poder de dominar a Terra Média."
+      data-classificacao="12 anos" data-duracao="2h 58min" data-genero="Aventura, Fantasia" data-ano="2001">
+      <img src="https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg" alt="O Senhor dos Anéis" />
+      <h3>O Senhor dos Anéis</h3>
+      <div class="descricao-abaixo"></div>
+    </div>
+
+    <div class="filme" data-titulo="Titanic"
+      data-sinopse="Um romance inesquecível entre Jack e Rose, dois jovens de diferentes classes sociais que vivem uma paixão intensa a bordo do navio Titanic."
+      data-classificacao="12 anos" data-duracao="3h 14min" data-genero="Drama, Romance" data-ano="1997">
+      <img src="https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg" alt="Titanic" />
+      <h3>Titanic</h3>
+      <div class="descricao-abaixo"></div>
+    </div>
+
+    <div class="filme" data-titulo="Vingadores: Ultimato"
+      data-sinopse="Após a devastação causada por Thanos, os Vingadores unem forças para uma missão desesperada com o objetivo de restaurar o equilíbrio do universo."
+      data-classificacao="12 anos" data-duracao="3h 2min" data-genero="Ação, Aventura, Ficção Científica"
+      data-ano="2019">
+      <img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg" alt="Vingadores: Ultimato" />
+      <h3>Vingadores: Ultimato</h3>
+      <div class="descricao-abaixo"></div>
+    </div>
+  </div>
+
+  <footer class="fixarRodape">
+    <p>&copy; <span id="anoAtual"></span> MATHFlix</p>
+  </footer>
+</body>
+
+</html>
