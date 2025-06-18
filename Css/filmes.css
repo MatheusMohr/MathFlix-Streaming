@@ -490,6 +490,22 @@ select#categoria:focus {
   border-top: 1px solid #333;
 }
 
+/* =============== BOTÃO GERENCIAR FILMES =================== */
+.gerenciar {
+  position: absolute;
+  top: 10px;          /* ajuste vertical, conforme preferir */
+  right: 10px;       /* deixa o botão parcialmente oculto para a direita */
+  padding: 5px 10px;
+  background-color: transparent; /* fundo meio transparente para efeito "meio oculto" */
+  color: var(--text-color);
+  border: none;
+  text-decoration: none;
+  font-size: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 0;
+  cursor: pointer;
+}
+
 /* =============== RESPONSIVIDADE ADICIONAL =============== */
 @media (max-width: 768px) {
   .modal-content {
